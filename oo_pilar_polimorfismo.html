@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Animal{
+            constructor(cor, tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+
+        class Passaro extends Animal{
+            
+            constructor(bico, cor, tamanho, peso){
+                super(cor, tamanho, peso)
+                this.bico = bico
+            }
+
+            voar(){
+                console.log('voar')
+            }
+          }
+
+          class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('Médio', cor, tamanho, peso)
+                this.falar = sabeFalar
+            }
+
+            falar(){
+                console.log('Falar')
+            }
+
+          }
+
+          class Arara extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('longo', cor, tamanho, peso)
+                this.falar = sabeFalar
+            }
+
+            falar(){
+                console.log('Falar')
+            }
+
+          }
+
+          class Aveztruz extends Passaro{
+            constructor(cor, tamanho, peso){
+                super('longo', cor, tamanho, peso)
+                
+            }
+
+            voar(){ //utilizando o recurso do polimorfismo para sobrescrever o método voar
+                console.log('não consegue voar')
+            }
+
+            enterrarCabeça(){
+                console.log('Enterrar cabeça')
+            }
+
+          }
+
+          //instanciando um objeto
+          
+          let papagaio = new Papagaio(true, 'Verde', 8, 120)
+          let aveztrus = new Aveztruz('curto', 'Cinza', 190, 20000)
+          console.log(papagaio)
+          console.log(aveztrus)
+
+          aveztrus.voar()
+    </script>  
+</body>
+</html>

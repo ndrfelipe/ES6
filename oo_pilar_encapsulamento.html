@@ -22,15 +22,21 @@
             // receber um valor com base no parâmetro e atualizar o valor da variavel em questão
             set canalAtivo(canal){
                 let x = this._relacaoCanais.indexOf(canal)
-                console.log(x+1)
-                this._canalAtivo = canal
+                if(x < 0){
+                    console.log('O canal buscado não está disponível')
+                }else{
+                    console.log('Canal existe e está na posição: ' + (x+1) )
+                    this._canalAtivo = canal 
+                }
+                
+                
             }
           }
 
           let tv = new Tv()
 
-          tv.canalAtivo = 20
-          console.log(tv.canalAtivo)
+          tv.canalAtivo = 2
+          console.log('Canal: ' + tv.canalAtivo)
     </script>  
 </body>
 </html>
