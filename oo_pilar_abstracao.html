@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //o operador class representa o modelo da entidade/objeto.
+          //no exemplo da rejeita do bolo, o bolo seria a classe e o resultado da receita seria o objeto
+          //classes adotam o modeleo CamelCase de escrita.
+          class ContaBancaria {
+            //agencia
+            //conta
+            //saldo
+            //limite
+            //investimentos
+            constructor(){  //é onde os atributos serão definidos a partir do atributo "this"
+                this.agencia = 9003
+                this.conta = 534103
+                this.saldo = 400
+                this.limite = 900
+                this.investimentos = 288
+            }
+
+            //ações são criadas com a mesma escrita que funções, mas são conhecidas como métodos.
+            depositar(valorDeposito){
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                return this.saldo
+            }
+          }
+
+          let x = new ContaBancaria() //o new é um operador que transforma a classe ContaBancaria() em um objeto.
+          let y = new ContaBancaria()
+
+          console.log(x.consultarSaldo())
+          x.depositar(100)
+          console.log(x.consultarSaldo())
+          x.sacar(300)
+          console.log(x.consultarSaldo())
+
+          console.log(y.consultarSaldo())   //o valor de y foi preservado.
+    </script>  
+</body>
+</html>
