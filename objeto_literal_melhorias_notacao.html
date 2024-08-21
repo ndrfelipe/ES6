@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nome = 'andré' 
+        let idade = 19
+        let sexo = 'masculino'
+        let profissao = 'programador'
+        
+        let objeto = {
+          nome: nome ,
+          idade: idade,
+          sexo: sexo,
+          profissao: profissao,
+          exibirResumo: function(){
+            console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}. `)
+          }
+        }
+
+
+        let objeto2 = { //quando o par valor tiver o mesmo nome, o JS permite declarar o nome de forma mais enxuta (como escrito abaixo)
+          nome ,
+          idade,
+          sexo,
+          profissao,
+          exibirResumo(){
+            console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}. `)
+          }
+
+        }
+        
+        console.log(objeto)
+        console.log(objeto2)
+          objeto.exibirResumo()
+    </script>  
+</body>
+</html>
