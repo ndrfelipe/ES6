@@ -8,17 +8,16 @@
 <body>
     <script>
         let pessoa = {
-          nome: 'andré',
-          idade: 19
+          nome: 'João',
+          idade: 30
         }
-
-        console.log(pessoa.nome)
-        console.log(pessoa.idade)
-
-        pessoa.nome = 'Felipe'
-        pessoa.idade = 20
-        console.log(pessoa.nome)
-        console.log(pessoa.idade)
+        
+        console.log(pessoa)
+        pessoa.sexo = 'feminino'
+        pessoa.darAbraco = () => console.log('Abraço dado')
+        
+        console.log(pessoa)
+        pessoa.darAbraco()
     </script>  
 </body>
 </html>

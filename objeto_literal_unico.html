@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matricula = {
+            idAluno: 102,
+            nome: 'André',
+            curso: 'ADS',
+            turno: 'Noite',
+            status() {
+                console.log('Matriculado')
+            }
+        }
+
+        console.log(matricula.status())
+
+        let y = matricula
+        console.log(y.nome)
+
+        y.nome = 'Joas'
+
+        console.log(matricula.nome)
+        console.log(y.nome)
+        
+    </script>  
+</body>
+</html>
