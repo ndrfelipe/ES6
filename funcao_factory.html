@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let Aluno1 = {
+            matricula: 202402,
+            nome: 'André',
+            curso: 'ADS',
+            sexo: 'masc',
+            status() {console.log('Matriculado')}
+        }
+
+        let Aluno2 = {
+            matricula: 202401,
+            nome: 'Joana',
+            curso: 'ADS',
+            sexo: 'fem',
+            status() {console.log('Matriculada')}
+        }
+
+        let AlunoFactory = function(matricula, nome, curso, sexo){
+            return {
+                matricula,
+                nome,
+                curso,
+                sexo,
+                status() {console.log('Matriculada')}
+            }
+        }
+
+        let Aluno3 = AlunoFactory(3020, 'Eduarda', 'SI', 'Feminino')
+        console.log(Aluno3)
+
+        console.log(`Matrícula: ${Aluno3.matricula}`)
+        console.log(`Nome: ${Aluno3.nome}`)
+        console.log(`Curso: ${Aluno3.curso}`)
+        console.log(`Sexo: ${Aluno3.sexo}`)
+        console.log(`Status: `)
+        Aluno3.status()
+    </script>  
+</body>
+</html>

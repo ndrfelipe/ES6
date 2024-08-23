@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //utilizando o operador spread (...)
+        let text = "Esse é o meu texto"
+
+        console.log(text)
+        console.log(...text)
+        console.log([...text])
+
+        //arrays
+        let cursoTec = ['ADS', 'CC']
+        let cursoD = ['Design', 'GTI']
+        let cursoT = [...cursoD, ...cursoTec]
+        console.log(cursoTec)
+        console.log(cursoD)
+        console.log(cursoT)
+
+        //objetos
+        let aluno = {matricula: 1223, turno: 'tarde', nome: 'jonathas'}
+        let aluno2 = {matricula: 1234, turno: 'noite', nome: 'Ruan'}
+        let alunosCursoADS = {...aluno, curso: "Análise e Desenvolvimento de sistemas" , ...aluno2}
+
+        console.log(aluno)
+        console.log(aluno2)
+        console.log(alunosCursoADS)
+    </script>  
+</body>
+</html>

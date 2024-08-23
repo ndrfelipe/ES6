@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       ///rest context
+
+       function soma(...param) { // o operador rest vai receber todos os parâmetros e vai juntá-los em uma estrutura de arrays
+        let result = 0
+
+        console.log(param)
+
+        param.forEach(v => result += v)
+        return result
+
+       }
+
+       console.log(soma(3, 8))
+
+       function multiplication(m, ...p){
+
+        var result = 0
+        console.log(m)
+        console.log(p)
+
+        p.forEach(v => result += m * v)
+
+        return result
+       }
+
+       console.log(multiplication(3, 4, 2))
+    </script>  
+</body>
+</html>

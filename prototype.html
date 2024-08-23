@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //objeto literal
+        let a1 = {
+            título: 'Duna',
+            autor: 'Frank Hebert',
+            genero: 'Ficção',
+            status(){console.log('Disponível')}
+        }
+
+        //funcao construtora
+        let Livro = function(){
+            this.titulo = 'Harry Potter e a Pedra Filosofal',
+            this.autor = 'J.K Roling',
+            this.genero = 'Fantasia',
+            this.status = function(){console.log('Disponível')}
+        }
+
+        let a2 = new Livro()
+
+        //classe
+        class Livro2{
+            constructor(){
+                this.titulo = 'Sapiens',
+                this.autor = 'Yuval Harari',
+                this.genero = 'História'
+            }
+
+            status(){
+                console.log('Disponível')
+            }
+        }
+
+        let a3 = new Livro2()
+
+        console.log(a1)
+        console.log(a2)
+        console.log(a3)
+    </script>  
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Carro = function(){
+            
+            this.marca = 'Ford'
+            this.cor = 'Preto'
+            this.velocidadeAtual = 0
+            this.velocidadeMaxima = 180
+
+            this.acelerar = function(){
+                let velocidade = this.velocidadeAtual + 50
+                if(velociade > this.velocidadeMaxima){
+                    velocidade = this.velocidadeMaxima
+                }
+                
+                this.setvelociadeAtual(velocidade)
+            }
+
+            this.getvelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+            
+            this.setvelociadeAtual = function(velocidadeAtual){
+                this.velocidadeAtual = velocidadeAtual
+            }
+        }
+
+        let Carro2 = function(){
+            var velocidadeMaxima = 180 //se comporta como um atributo privado a partir do contexto que foi colocado como variável da função
+            var kmRodados = 0
+            this.marca = 'Ford'
+            this.cor = 'Preto'
+            this.velocidadeAtual = 0
+
+            this.acelerar = function(){
+                let velocidade = this.velocidadeAtual + 50
+
+                if(velocidade > velocidadeMaxima){
+                    velocidade = velocidadeMaxima
+                }
+                
+                this.setvelociadeAtual(velocidade)
+
+                setKmRodados(0.07)
+                console.log(kmRodados)
+            }
+
+            this.getvelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+            
+            this.setvelociadeAtual = function(velocidadeAtual){
+                this.velocidadeAtual = velocidadeAtual
+            }
+
+            var setKmRodados = function(km){
+                kmRodados +=km
+            }
+        }
+
+         let carro2 = new Carro2()
+        console.log(carro2.velocidadeAtual)
+        carro2.acelerar()
+        console.log(carro2.velocidadeAtual)
+        carro2.acelerar()
+        console.log(carro2.velocidadeAtual)
+    </script>  
+</body>
+</html>

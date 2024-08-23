@@ -14,20 +14,24 @@
             this.velocidadeMaxima = 180
 
             this.acelerar = function(){
-                let velocidade = velocidadeAtual + 10
+                let velocidade = this.velocidadeAtual + 10
                 this.setvelociadeAtual(velocidade)
             }
 
-            let.getvelocidadeAtual = function(){
-                return velocidadeAtual
+            this.getvelocidadeAtual = function(){
+                return this.velocidadeAtual
             }
             
-            let.setvelociadeAtual = function(velocidadeAtual){
+            this.setvelociadeAtual = function(velocidadeAtual){
                 this.velocidadeAtual = velocidadeAtual
             }
         }
+
         let carro = new Carro()
-        console.log(`A sua velocidade atual é: ${carro.velocidadeAtual}`)
+
+        carro.setvelociadeAtual(20)
+        carro.acelerar()
+        console.log(`A sua velocidade atual é: ${carro.getvelocidadeAtual()}`)
     </script>  
 </body>
 </html>
